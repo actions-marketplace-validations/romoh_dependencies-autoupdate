@@ -25,11 +25,6 @@ if [ -z "$update_command" ]; then
     exit 1
 fi
 
-if [ -z "$pr_branch" ]; then
-    echo "pr-branch not set, falling back to `main`"
-    pr_branch="main"
-fi
-
 # remove optional params markers
 update_path_value=${update_path%?}
 if [ -n "$update_path_value" ]; then
